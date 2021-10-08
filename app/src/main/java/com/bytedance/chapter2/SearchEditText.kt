@@ -13,6 +13,7 @@ class SearchEditText @JvmOverloads constructor(
 
     init {
 
+        //  绑定视图树
         inflate(context, R.layout.search_edit_text, this)
 
     }
@@ -30,6 +31,7 @@ class SearchEditText @JvmOverloads constructor(
             }
 
             override fun afterTextChanged(s: Editable?) {
+                //  监听编辑框内容变更
                 listener.onChanged(s.toString())
             }
 
